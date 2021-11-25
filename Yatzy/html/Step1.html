@@ -1,0 +1,17 @@
+<p>
+  Welcome
+  <?= $name; ?>
+  :)
+</p>
+<p>Your dice values are:</p>
+<form method="POST"> You have rolled <?= $rerolls; ?> times <br>
+  <input type="hidden" name="rerolls" value="<?= $rerolls;?>" />
+  <p>Select the die you want roll again</p>
+  <?php
+        foreach($dice as $key=>$value){ 
+      echo "<div class='dices'><img src='pictures/DiceNum$value.png' alt='Dice_$value' height='40'><br> <input type='checkbox' name='dice_$key'> </div>"; 
+      echo "<input  type='hidden' name='t_$key' value='$value'/>"; 
+} ?>
+<br>
+  <input type="submit" name="submit" value="Next roll" />
+</form>

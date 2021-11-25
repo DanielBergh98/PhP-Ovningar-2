@@ -1,0 +1,12 @@
+<p>You have used all your rerolls. Your dice are.....</p> <br>
+<?php
+    foreach($dice as $key=>$value){ 
+      echo "<div class='dices'><img src='pictures/DiceNum$value.png' alt='Dice_$value' height='40'></div>"; 
+}
+?>
+<br>
+You got <?= $result['result']; ?> with the value of <?= $result ['value']; ?>
+<form method="POST">
+  <input type="submit" name="submit" value="Play Again" />
+  <input type="submit" name="submit" value="Quit" />
+</form>
